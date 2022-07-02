@@ -1,11 +1,17 @@
+using Descartes;
+using Descartes.Persistence;
+
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+var config = builder.Configuration;
+string connectionString = config.GetConnectionString("Localhost");
 
+// Add services to the container.
 builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddDescartesContext(connectionString);
+builder.Services.AddDescartesDependencyInjection();
 
 var app = builder.Build();
 
