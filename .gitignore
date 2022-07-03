@@ -1,4 +1,8 @@
-/obj/
-/.vs/
-/bin/
-/appsettings.*.json
+Descartes/obj/
+Descartes/.vs/
+Descartes/bin/
+Descartes/appsettings.*.json
+
+DescartesTests/obj/
+DescartesTests/.vs/
+DescartesTests/bin/
