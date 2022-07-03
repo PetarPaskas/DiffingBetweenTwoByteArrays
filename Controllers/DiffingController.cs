@@ -20,17 +20,22 @@ namespace Descartes.Controllers
             return Ok();
         }
 
-        [HttpPost("{pairId}/left")]
-        public async Task<IActionResult> SubmitLeft(int pairId, [FromBody] PostDataDto data)
+        [HttpPut("{pairId}/left")]
+        public async Task<IActionResult> SubmitLeft(int pairId, [FromBody] PutDataDto data)
         {
             return Ok();
         }
 
-        [HttpPost("{pairId}/right")]
-        public async Task<IActionResult> SubmitRight(int pairId, [FromBody] PostDataDto data)
+        [HttpPut("{pairId}/right")]
+        public async Task<IActionResult> SubmitRight(int pairId, [FromBody] PutDataDto data)
         {
             return Ok();
         }
-        
+
+        [HttpGet("{pairId}/{position}")]
+        public async Task<IActionResult> Get(int pairId, string position)
+        {
+            return Ok();
+        }
     }
 }

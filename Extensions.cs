@@ -1,4 +1,5 @@
-﻿using Descartes.Persistence;
+﻿using Descartes.Helpers;
+using Descartes.Persistence;
 using Microsoft.EntityFrameworkCore;
 
 namespace Descartes
@@ -15,7 +16,7 @@ namespace Descartes
 
         public static void AddDescartesDependencyInjection(this IServiceCollection services)
         {
-
+            services.AddScoped<IDiffingHelper, DiffingHelper>();
         }
     }
 }
